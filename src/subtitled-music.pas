@@ -1,0 +1,52 @@
+program Musik;
+uses crt;
+procedure Play(a,b:integer);
+begin
+sound(a);
+delay(b);
+nosound;
+delay(60);
+end;
+const c2=262;
+      cis2=277;
+      d2=293;
+      dis2=311;
+      e2=330;
+      f2=349;
+      fis2=370;
+      g2=392;
+      gis2=415;
+      a2=440;
+      ais2=466;
+      h2=494;
+      c3=523;
+      l1=1000;
+      l2=500;
+      l2p=750;
+      l4=250;
+      l4p=375;
+      l8=125;
+      l8p=177;
+      l16=62;
+      l16p=94;
+var f:integer;
+    a:array[1..4] of string;
+begin
+a[1]:='Yo!';
+a[2]:='Get On Up';
+a[3]:='Whatsha Want';
+a[4]:='Get On Uppa';
+for f:=1 to 4 do begin
+clrscr;
+writeln(a[f]);
+Play(c3,l4p);
+Play(c3,l4);
+Play(c3,l8);
+Play(ais2,l4);
+Play(g2,l4);
+Play(fis2,l4);
+Play(f2,l4);
+Play(dis2,l4);
+end;
+clrscr;
+end.
